@@ -1,0 +1,11 @@
+tesseract-ocr-ful:  tesseract-ocr-ful-5.0.0-i486-1sys  
+tesseract-ocr-ful:
+tesseract-ocr-ful:
+tesseract-ocr-ful:
+tesseract-ocr-ful:   https://github.com/tukulor/ful.traineddata
+tesseract-ocr-ful:
+tesseract-ocr-ful:
+tesseract-ocr-ful:
+tesseract-ocr-ful:
+tesseract-ocr-ful:
+tesseract-ocr-ful: Paket von W.Landgraf         Linux   SYS       www.SYS-Linux.yi.org/tgz
