@@ -1,0 +1,101 @@
+ful.traineddata       fi   OCR    fula / pulaar / fulfulde / tukölör 
+
+
+
+
+Fi golliri   :
+
+
+wadd  aplicacao   fi   OCR  to nder hiisorgal    ( sifa: Viet-OCR ,  gscan2pdf , gimagereader )  
+
+Waddu   ful.traineddata  fi dossier    honto woni    eng.traineddata , fra.traineddata    etc
+             ko buri hewdi , dum woni he :   /usr/share/tesseract-ocr/5/tessdata/
+
+
+
+Fi modjini   :      wadd training fi modjini   ful.traineddata  
+
+
+Fi OCR gollay mojju ,  haani waddete  training   fi "font"ji = sifa alkulji fuf
+
+
+
+wadd    aplicacao     jTessBoxEditor     to nder hiisorgal
+
+Linux:   waylu  donne train   fi train.sh   ,  gollnu   train.sh  he  sh  (dum manaa:  sh  train.sh)
+Windows:  gollnu  train.bat
+
+
+loowaade:   donneji    fuf  ,  wadd he nder  dossier  ( he miisal ,  he nder .../OCR ),
+                 kaddi  wadd he nder donneji fuf gila   IMG+BOX.zip             
+
+gollnu   train.sh   fi fokkitaade  jTessBoxEditor
+
+
+
+
+1)  wootere, ada hani scan  text fula   .jpg ou .tif   takko alkulji makko  .box  :
+
+
+       wadd  dossier  .../IMG+BOX 
+
+a) wadd  scan(ji)  he huunde   bindaama he bolle fula  ,  he miisal    tale-fula.jpg
+
+Jooni, ada footi ndar, hol sifa alkulji = "font"   tale-fula.jpg waayi .  Ndaa nataloji he nder .../OCR
+     Si dum waayi no  fannu  ... notoserif ...  ,  han  a wayli innde fi  tale-fula.notoserif.jpg 
+
+gollnu   he nder jTessBoxEditor :   Trainer  ...  TrainingData:  .../IMG+BOX  Language: ful
+                  select --TrainingMode--  make Box-File   ... Run
+
+Nde gasi ,  ma a yih   he nder  dossier ../IMG+BOX :     tale-fula.notoserif.box
+
+b) dum,  jooni ada hani fewni.   
+
+gollnu   he nder  jTessBoxEditor :  Box Editor ... Open  ../IMG+BOX/tale-fula.notoserif.jpg  
+
+Jooni,ada corrige fuf dum woppi
+
+nde gaasi,  wadd   Save  
+
+Jooni,   a copy   tale-fula.notoserif.jpg  e   tale-fula.notoserif.box  he nder dossier   .../OCR  takko  ...jpg e ...box  djiya  fof
+
+Ada waawi fillitade  a)  e b)   fi haajuji  bindaama he bolle fula    buy.   
+Kono:  !!  wadd doy ; tuma kala a fillitay dum,  a dannay  .box corrigaama tawi fuf ; ko dum waddi 
+       a haani copy  .box kala waddaama  so corrigaama   he nder dossier .../OCR
+
+
+
+2)  ada waawi kaddi beydi  dictionaire.   
+   He nder ful.frequent_words_list  a beydi kelme hiite ,
+   he nder  ful.words_list   a beydi  kelme  ko buri heydi.
+
+   Nde gasi, ada waawi gollni he nder jTessBoxEditor :   Trainer  ...  TrainingData:  .../OCR  Language: ful
+                  select --TrainingMode--  train Dictionary   ... Run   ,  kono mi sikki dum
+                   alla hiite   sabu   he  training ko buri heydi  3)  dum waddete kaddi
+
+
+
+3)  Baawo adda waddiino .jpg -ji  e .box -ji  keesi  fuf  ( e haray ful.frequent_words_list e ful.words_list beydaama )
+     he nder dossier   .../OCR   ,  a waaway  wadde  training  fi mojjini   ful.traineddata
+
+gollnu he nder jTessBoxEditor :   Trainer  ...  TrainingData:  .../OCR  Language: ful
+                  select --TrainingMode--  train with Existing Box   ... Run 
+
+ si dum fooli ,  a taway ful.traineddata  mojjaama   he nder .../OCR/tessdata   
+
+he dumdo, a wadday copy to nder dossier ko buri hewdy , he miisal  /usr/share/tesseract-ocr/5/tessdata/ 
+     fi  aplicacao OCR  gulliray dum yeeso. 
+
+
+
+
+Fuf  scanji  huunde  bindaama he bolle fula    .jpg wala .tif   takku  .box  , ada waawi waddi he :
+https://github.com/tukulor/ful.traineddata
+
+Kaddi kala  ful.traineddata    (  si waddaama he  .jpg.tif  e .box  -ji  ton fuf  ! ) 
+
+       
+
+
+
+ 
